@@ -1,0 +1,20 @@
+{
+    "manifest_version": 2,
+    "name": "MU Control",
+    "description": "An extension to control Music Unlimited",
+    "version": "0.5",
+
+    "permissions": [
+        "https://music.sonyentertainmentnetwork.com/"
+    ],
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_popup": "control.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://music.sonyentertainmentnetwork.com/*"],
+            "js": ["player.js"]
+        }
+    ]
+}
